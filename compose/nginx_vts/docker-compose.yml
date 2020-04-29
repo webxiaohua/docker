@@ -1,0 +1,13 @@
+version: '2.0'
+services:
+  centos:
+    image: nginx_vts:1.0
+    container_name: nginx_vts
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /web:/web
+      - /web/docker/settings/nginx_vts/conf/conf.d:/usr/share/nginx/conf/conf.d
+      - /web/docker/settings/nginx_vts/conf/nginx.conf:/usr/share/nginx/conf/nginx.conf
+      - /web/docker/settings/nginx_vts/logs:/var/log/nginx

@@ -1,6 +1,0 @@
-# 构建php镜像
-docker build -t nginx_vts:1.0 .
-# 启动镜像
-docker run -d -i -t -p 81:80 --name nginx_vts nginx_vts:1.0 /usr/share/nginx/sbin/nginx -g "daemon off;"
-# 进入镜像
-docker exec -it nginx_vts /bin/bash

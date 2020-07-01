@@ -7,6 +7,3 @@ docker pull ouqg/gocron
 ```
 docker run --name gocron -p 5920:5920 -d ouqg/gocron
 ```
-
-
-

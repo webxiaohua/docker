@@ -1,0 +1,10 @@
+version: '2.0'
+services:
+  nginx:
+    image: php-nginx-dev:1.0
+    container_name: php-nginx-dev
+    ports:
+      - "80:80"
+    volumes:
+      - ~/workspace/code/php/demo01:/opt/web/www
+      - ~/workspace/code/php/demo01/nginx_conf/demo01.conf:/etc/nginx/conf.d/demo01.conf

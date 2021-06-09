@@ -1,0 +1,21 @@
+version: '2.0'
+services:
+  mysql:
+    image: redis:5.0.3
+    container_name: redis
+    tty: true
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    #networks:
+    #  extnetwork:
+    #    ipv4_address: 172.18.0.2
+    volumes:
+      - ~/workspace/code/devops/docker/redis/conf/redis.conf:/redis.conf
+      #- ~/docker/redis/data:/data
+#networks:
+#  extnetwork:
+#    ipam:
+#      config:
+#        - subnet: 172.18.0.0/16
+#          gateway: 172.18.0.1
